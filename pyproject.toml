@@ -7,6 +7,7 @@ name = "famtree"
 version = "0.1.0"
 description = "Readable, themeable family-tree rendering. Generation-tiered layout, HTML/CSS cards, rasterized with Playwright."
 requires-python = ">=3.11"
+readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "slug-discord" }]
 keywords = ["family", "tree", "genealogy", "render", "discord", "async"]
@@ -17,6 +18,11 @@ classifiers = [
     "Framework :: AsyncIO",
 ]
 dependencies = ["pydantic>=2.0"]
+
+[project.urls]
+Homepage = "https://github.com/slug-discord/famtree"
+Repository = "https://github.com/slug-discord/famtree"
+Issues = "https://github.com/slug-discord/famtree/issues"
 
 [project.optional-dependencies]
 render = ["playwright>=1.40"]
