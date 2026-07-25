@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "famtree"
+version = "0.1.0"
+description = "Readable, themeable family-tree rendering. Generation-tiered layout, HTML/CSS cards, rasterized with Playwright."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "slug-discord" }]
+keywords = ["family", "tree", "genealogy", "render", "discord", "async"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Framework :: AsyncIO",
+]
+dependencies = ["pydantic>=2.0"]
+
+[project.optional-dependencies]
+render = ["playwright>=1.40"]
+dev = ["pytest", "pytest-asyncio"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/famtree"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
